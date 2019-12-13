@@ -1,17 +1,13 @@
 package com.veselov.alex.unittesting.service;
 
+import java.util.Arrays;
+
 public class SomeBusinessLogic {
     private SomeDataService service;
 
-
     public int calculateSumUsingService() {
-        int sum = 0;
-        int[] ar = this.service.retrieveData();
-        for (int cur :
-                ar) {
-            sum += cur;
-        }
-        return sum;
+        return Arrays.stream(this.service.retrieveData())
+                .reduce(Integer::sum).orElse(0);
     }
 
     public void setService(SomeDataService service) {
