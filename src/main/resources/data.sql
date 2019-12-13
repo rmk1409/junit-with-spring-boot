@@ -1,2 +1,3 @@
-insert into item
-values (1001, 'Item1', 10, 20);
+insert into item values (1001, 'Item1', 11, 21);
+insert into item values (1002, 'Item2', 12, 22);
+insert into item values (1003, 'Item1', 13, 23);
